@@ -184,4 +184,5 @@ Examples:
 - No buy/sell/hold/accumulate/avoid language, no price targets (external analyst consensus may be quoted with source), no position sizing — educational research organization only.
 - Respect the packet's "what NOT to use" list (no EV/EBITDA for banks, no standard P/E for REITs, no P/E for pre-commercial biotech, low P/E ≠ cheap for cyclicals at peak).
 - Cite sources with dates for key figures; mark every estimate as an estimate; state clearly when data is missing, stale, or unverified.
-- If the company can't be verified from primary sources at all, concl
+- If the company can't be verified from primary sources at all, conclude "insufficient data" rather than leaning on screeners.
+- Always end with the disclaimer line from Step 3G.
