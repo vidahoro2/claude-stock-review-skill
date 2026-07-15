@@ -4,6 +4,24 @@
 
 *Hospitals, managed care, health insurers, care providers* — GICS: Health Care (Health Care Providers & Services)
 
+## Prompt
+
+> Analyze [company name / ticker] using the uploaded Core Framework and the uploaded Health Services guide.
+> Do not use buy/sell/hold language.
+> Please provide:
+> 1. Business model summary
+> 2. Correct sector classification
+> 3. Peer group and why those peers are appropriate
+> 4. Key sector metrics
+> 5. Company values versus peers and 5-year history
+> 6. Positive / Watch / Negative assessment
+> 7. Severe red flags, if any
+> 8. Valuation method appropriate for the sector
+> 9. Data confidence level: High, Medium, or Low
+> 10. Neutral research conclusion: strong on current evidence; mixed / needs more evidence; high-risk / special situation; or insufficient data
+>
+> Use primary sources where possible, such as 10-Ks, 10-Qs, annual reports, earnings releases, and regulatory filings. Do not rely only on screeners or summaries.
+
 ## Universal checklist
 
 1. Identify the business model and sector page. For mixed businesses, classify by where most operating profit comes from.

@@ -1,10 +1,17 @@
 # AI Stock Review Packet: Real Estate / REITs
 
-**Version 2.2 — Last updated 2026-06-09.** Supersedes v2.1: upgraded from a general sector guide to a strict execution file (v4 verification and provenance standard, FFO/AFFO disambiguation, debt-definition rules, dividend-coverage rules, scoring and audit-trail rules). Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.2.2 — Last updated 2026-07-13.** v2.2.2 adds the weak-on-current-evidence conclusion category. v2.2.1 extends the v4 provenance labels (adds Calculated — verified inputs and Not disclosed; Severe-flag caps require verified evidence). Supersedes v2.1: upgraded from a general sector guide to a strict execution file (v4 verification and provenance standard, FFO/AFFO disambiguation, debt-definition rules, dividend-coverage rules, scoring and audit-trail rules). Educational framework — not investment advice. No buy/sell/hold language.
 
 *Real estate investment trusts and property companies* — GICS: Real Estate (Equity REITs by property type: residential, industrial, office, retail, data centers, towers, healthcare; plus RE Management & Development)
 
 **Core principle: Verified does not mean Positive.** Verification proves the number is real; the sector thresholds and the trend determine the rating. A verified AFFO payout ratio of 92% is still Negative-band. A verified net debt/EBITDAre of 6.2x is still Watch.
+
+## Prompt
+
+> Analyze [company name / ticker] using the uploaded Core Framework and this Real Estate / REITs guide.
+> Do not use buy/sell/hold language.
+> Provide: 1. Business model summary · 2. Sector classification and property type · 3. Peer group with rationale · 4. Key REIT metrics with provenance labels · 5. Values vs peers and 5-year history · 6. Positive/Watch/Negative assessment · 7. Severe red flags, if any · 8. Valuation (P/FFO, P/AFFO, NAV, implied cap rate) · 9. Data confidence: High/Medium/Low · 10. Neutral research conclusion: strong on current evidence / mixed, needs more evidence / high-risk, special situation / insufficient data.
+> Use primary sources (10-K, 10-Q, supplemental information packages, earnings releases). Do not rely only on screeners or summaries.
 
 ## Sector context
 
@@ -33,12 +40,14 @@ Every key metric carries exactly one label. The label reflects what the review i
 | Label | Meaning |
 |---|---|
 | **Verified** | The review itself directly read the source document and quotes the exact label next to the value |
+| **Calculated — verified inputs** | Derived by a stated, reproducible formula whose inputs are each individually Verified. Derived ratios (FCF margin, coverage ratios, EV multiples) are never plain "Verified" |
 | **User-provided filing excerpt** | The user pasted verbatim filing text containing the label and value; usable for rating decisions with provenance stated, but not "Verified" |
 | **Reported, pending direct verification** | The value came from another AI, an evaluator, a search summary, a secondary source, or a relayed table |
-| **Estimated** | Derived from market data, aggregators, or calculation |
+| **Estimated** | Derived from market data, aggregators, or calculation with unverified or mixed inputs; "Estimated proxy" is its sub-type |
 | **Needs verification** | An important metric not found or not confirmed |
+| **Not disclosed** | The relevant primary sources were checked and do not contain the metric — a disclosure fact, not a performance judgment |
 
-Rules: external confirmation never upgrades a label to Verified — only directly reading the source does. "Reported" is Medium confidence at most and never enough by itself to upgrade a pillar. A score can use reported or estimated data cautiously; the label tells the reader how much to trust it.
+Rules: external confirmation never upgrades a label to Verified — only directly reading the source does. "Reported" is Medium confidence at most and never enough by itself to upgrade a pillar. A score can use reported or estimated data cautiously; the label tells the reader how much to trust it. A derived ratio takes "Calculated — verified inputs" only when every input meets the verification standard; if any input is weaker, the ratio takes the weakest input's label. Only Verified or Calculated — verified inputs evidence can activate a Severe-flag score cap.
 
 ## REIT metric verification standard
 
@@ -163,11 +172,11 @@ Grade findings Minor / Moderate / Severe and attach a provenance status to each 
 | Dividend safety (AFFO payout) | 15% |
 | Valuation (P/FFO, NAV, implied cap rate) | 15% |
 
-Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% weak or priced low for a reason. Any verified Severe red flag caps the score at 50% until resolved; two or more usually mean high-risk / special situation. Verify flags against primary sources before capping. The score is a research organizer, not a prediction engine.
+Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no verified Severe flag = weak on current evidence. Any verified Severe red flag caps the score at 50% until resolved; two or more usually mean high-risk / special situation. Verify flags against primary sources before capping. The score is a research organizer, not a prediction engine.
 
 ## Conclusion template
 
-End with exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name the evidence) / **high-risk, special situation** / **insufficient data** — plus data confidence (High/Medium/Low) and a two-sentence thesis including what would break it. No buy/sell/hold language.
+End with exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name the evidence) / **weak on current evidence** (score <50% with sufficient evidence and no verified Severe flag) / **high-risk, special situation** / **insufficient data** — plus data confidence (High/Medium/Low) and a two-sentence thesis including what would break it. No buy/sell/hold language.
 
 ## Final sector checklist
 

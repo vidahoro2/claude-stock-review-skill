@@ -65,7 +65,7 @@ Concise and dashboard-like. Short text + visual widget (see Step 5). Structure:
 
 **F. Data confidence** — High (recent filings/official disclosures) / Medium (presentations, calls, reputable providers) / Low (incomplete, stale, estimates). Name what's missing.
 
-**G. Neutral research conclusion** — exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name it) / **high-risk, special situation** / **insufficient data**. One- or two-sentence thesis with what would break it.
+**G. Neutral research conclusion** — exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name it) / **weak on current evidence** (score <50% with sufficient evidence and no verified Severe flag) / **high-risk, special situation** / **insufficient data**. One- or two-sentence thesis with what would break it.
 
 End every review with: *"This is general information only and not financial advice. For personal guidance, please talk to a licensed professional."*
 
@@ -85,7 +85,7 @@ When the user selects an action (by button or words), read `references/deep_dive
 
 ## Step 5 — Visual scorecard (when a widget tool is available)
 
-Render the first-pass scorecard as a compact inline widget (call the visualization `read_me` setup first, silently): header with conclusion badge (teal = strong, amber = mixed, red = high-risk, gray = insufficient data); metric cards (score first, with "no Severe cap" / "capped at 50%" subtext); pillar bars filled 0/50/100% colored red #E24B4A / amber #EF9F27 / teal #1D9E75; red-flag severity pills (Severe red, Moderate amber, Minor gray) including verification status; action buttons from Step 4 wired to `sendPrompt`; footer disclaimer. Theme-aware CSS variables, flat design, round all numbers. The widget shows the same numbers as the text — never new claims. No widget tool → numbered action list in text instead.
+Render the first-pass scorecard as a compact inline widget (call the visualization `read_me` setup first, silently): header with conclusion badge (teal = strong, amber = mixed, orange = weak, red = high-risk, gray = insufficient data); metric cards (score first, with "no Severe cap" / "capped at 50%" subtext); pillar bars filled 0/50/100% colored red #E24B4A / amber #EF9F27 / teal #1D9E75; red-flag severity pills (Severe red, Moderate amber, Minor gray) including verification status; action buttons from Step 4 wired to `sendPrompt`; footer disclaimer. Theme-aware CSS variables, flat design, round all numbers. The widget shows the same numbers as the text — never new claims. No widget tool → numbered action list in text instead.
 
 ## Verification standard (strict)
 
@@ -184,5 +184,4 @@ Examples:
 - No buy/sell/hold/accumulate/avoid language, no price targets (external analyst consensus may be quoted with source), no position sizing — educational research organization only.
 - Respect the packet's "what NOT to use" list (no EV/EBITDA for banks, no standard P/E for REITs, no P/E for pre-commercial biotech, low P/E ≠ cheap for cyclicals at peak).
 - Cite sources with dates for key figures; mark every estimate as an estimate; state clearly when data is missing, stale, or unverified.
-- If the company can't be verified from primary sources at all, conclude "insufficient data" rather than leaning on screeners.
-- Always end with the disclaimer line from Step 3G.
+- If the company can't be verified from primary sources at all, concl

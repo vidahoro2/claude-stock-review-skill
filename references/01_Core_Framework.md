@@ -1,8 +1,15 @@
 # Core Framework — Universal Stock Analysis Rules
 
-**Version 2.1 — Last updated 2026-06-09.** Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-07-13.** v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
 
-Part of the Stock Analysis Modular System. Read alongside the relevant sector AI Packet when classification is unclear, the business is mixed, or a universal rule needs detail.
+Part of the Stock Analysis Modular System. Upload (or paste) this with the relevant sector guide or AI packet when reviewing one company.
+
+## How to use the modular system
+
+- **Learning:** full Master Guide.
+- **Analyzing one stock:** this Core Framework + the relevant Sector guide.
+- **Most token-efficient AI analysis:** the relevant AI Packet only.
+- **Updating:** update the Master Guide first, then regenerate Core, Sector files, and AI Packets.
 
 ## The four comparisons (always)
 
@@ -107,6 +114,20 @@ Matters most for mining, energy, banks, staples/multinationals, industrials, and
 
 **Source hierarchy:** company filings and audited statements first; investor presentations are useful but promotional; third-party screeners must be checked against filings.
 
+**Provenance labels (v4 standard):** every key metric carries exactly one label. The label reflects what the review itself verified, not how plausible the number is:
+
+| Label | Meaning |
+|---|---|
+| **Verified** | The review itself directly read the source document and quotes the exact label next to the value |
+| **Calculated — verified inputs** | Derived by a stated, reproducible formula whose inputs are each individually Verified. Derived ratios (FCF margin, coverage ratios, EV multiples) are never plain "Verified" |
+| **User-provided filing excerpt** | The user pasted verbatim filing text containing the label and value; usable for rating decisions with provenance stated, but not "Verified" |
+| **Reported, pending direct verification** | The value came from another AI, an evaluator, a search summary, a secondary source, or a relayed table |
+| **Estimated** | Derived from market data, aggregators, or calculation with unverified or mixed inputs; "Estimated proxy" is its sub-type |
+| **Needs verification** | An important metric not found or not confirmed |
+| **Not disclosed** | The relevant primary sources were checked and do not contain the metric — a disclosure fact, not a performance judgment |
+
+Rules: external confirmation never upgrades a label to Verified — only directly reading the source does. "Reported" is Medium confidence at most and never enough by itself to upgrade a pillar. A score can use reported or estimated data cautiously; the label tells the reader how much to trust it. A derived ratio takes "Calculated — verified inputs" only when every input meets the verification standard; if any input is weaker, the ratio takes the weakest input's label. Only Verified or Calculated — verified inputs evidence can activate a Severe-flag score cap.
+
 **Conflicting figures rule (universal):** when two figures for the same metric appear to conflict, do not choose one immediately. First classify the difference: 1. different scope — group vs segment, consolidated vs ex-subsidiary · 2. different basis — gross vs net, reported vs adjusted · 3. different period — quarterly, annualized, LTM, fiscal year · 4. different currency · 5. different definition — company-defined vs packet-defined. Show both figures with provenance labels, then rate the pillar based on the figure that best matches the packet definition. If neither figure matches the packet definition, keep the pillar at Watch or Needs verification.
 
 **Estimated proxy:** when a metric is calculated from available inputs but does not match the company's exact disclosed definition, label it **"Estimated proxy"** and state the inputs used. Examples: an AFFO payout proxy estimated above 100% when AFFO itself is not disclosed; an interest coverage proxy estimated from verified income-statement inputs but not company-disclosed; a net debt/EBITDAre proxy estimated when EBITDAre is not disclosed or JV/pro-rata treatment is unresolved. Never imply the proxy is the same as the company's official metric: a proxy is a sub-type of Estimated, is never Verified, never High confidence, and any rating that rests on it must say so.
@@ -121,5 +142,24 @@ Ranges are rules of thumb calibrated June 2026 — refresh at least annually fro
 |---|---|
 | Strong on current evidence | Most pillars Positive, no Severe flags, valuation reasonable, data confidence High |
 | Mixed / needs more evidence | Score ~50–75% or open questions; name the specific evidence needed |
+| Weak on current evidence | Score <50% with sufficient evidence and no verified Severe flag — clearly weak, but not a special situation |
 | High-risk / special situation | Verified Severe flag(s), or binary outcomes dominate |
 | Insufficient data | Key metrics unverifiable from primary sources; state what is missing |
+
+## Reusable AI stock-analysis prompt
+
+> Analyze [company name / ticker] using the uploaded Core Framework and the uploaded [sector] guide.
+> Do not use buy/sell/hold language.
+> Please provide:
+> 1. Business model summary
+> 2. Correct sector classification
+> 3. Peer group and why those peers are appropriate
+> 4. Key sector metrics
+> 5. Company values versus peers and 5-year history
+> 6. Positive / Watch / Negative assessment
+> 7. Severe red flags, if any
+> 8. Valuation method appropriate for the sector
+> 9. Data confidence level: High, Medium, or Low
+> 10. Neutral research conclusion: strong on current evidence; mixed / needs more evidence; high-risk / special situation; or insufficient data
+>
+> Use primary sources where possible, such as 10-Ks, 10-Qs, annual reports, earnings releases, and regulatory filings. Do not rely only on screeners or summaries.

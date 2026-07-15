@@ -1,10 +1,17 @@
 # AI Stock Review Packet: Banks
 
-**Version 2.2 — Last updated 2026-06-09.** Supersedes v2.1: upgraded from a general sector guide to a strict execution file (verification standard, capital disambiguation, scoring rules, audit trail, digital-bank adjustments). Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.2.2 — Last updated 2026-07-13.** v2.2.2 adds the weak-on-current-evidence conclusion category. v2.2.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Supersedes v2.1: upgraded from a general sector guide to a strict execution file (verification standard, capital disambiguation, scoring rules, audit trail, digital-bank adjustments). Educational framework — not investment advice. No buy/sell/hold language.
 
 *Commercial banks, regional banks, money-center banks, digital banks and fintechs with banking charters* — GICS: Financials (Banks)
 
 **Core principle: Verified does not mean Positive.** Verification proves the number is real; the sector thresholds, the trend, and the distance from regulatory minimums determine the rating. A verified CET1 of 11.3% is still Watch.
+
+## Prompt
+
+> Analyze [company name / ticker] using the uploaded Core Framework and this Banks guide.
+> Do not use buy/sell/hold language.
+> Provide: 1. Business model summary · 2. Sector classification · 3. Peer group with rationale · 4. Key bank metrics with verification status · 5. Values vs peers and 5-year history · 6. Positive/Watch/Negative assessment · 7. Severe red flags, if any · 8. Valuation (P/B or P/TBV with ROE/ROTE) · 9. Data confidence: High/Medium/Low · 10. Neutral research conclusion: strong on current evidence / mixed, needs more evidence / high-risk, special situation / insufficient data.
+> Use primary sources (10-K, 10-Q, 20-F, 6-K, call reports, regulatory filings, earnings releases). Do not rely only on screeners or summaries.
 
 ## Key metrics & rule-of-thumb ranges
 
@@ -44,6 +51,23 @@ Rules: search summaries, aggregator snippets, and unlabeled extracted numbers ca
 **Estimated proxy:** when a metric is calculated from available inputs but does not match the company's exact disclosed definition, label it **"Estimated proxy"** and state the inputs used. Examples: an AFFO payout proxy estimated above 100% when AFFO itself is not disclosed; an interest coverage proxy estimated from verified income-statement inputs but not company-disclosed; a net debt/EBITDAre proxy estimated when EBITDAre is not disclosed or JV/pro-rata treatment is unresolved. Never imply the proxy is the same as the company's official metric: a proxy is a sub-type of Estimated, is never Verified, never High confidence, and any rating that rests on it must say so.
 
 **Guidance is not achievement:** guidance, targets, and management plans can support a Watch or directional comment, but they should not receive full Positive credit unless supported by achieved results, binding regulatory approval, or directly verified realized performance. This applies especially to: utilities rate-base growth guidance · REIT rent ramp / stabilized rent targets · energy production or capex targets · SaaS margin expansion targets · bank medium-term ROE targets.
+
+## Provenance labels (v4 standard)
+
+Every key metric carries exactly one label. The label reflects what the review itself verified, not how plausible the number is:
+
+| Label | Meaning |
+|---|---|
+| **Verified** | The review itself directly read the source document and quotes the exact label next to the value |
+| **Calculated — verified inputs** | Derived by a stated, reproducible formula whose inputs are each individually Verified. Derived ratios (FCF margin, coverage ratios, EV multiples) are never plain "Verified" |
+| **User-provided filing excerpt** | The user pasted verbatim filing text containing the label and value; usable for rating decisions with provenance stated, but not "Verified" |
+| **Reported, pending direct verification** | The value came from another AI, an evaluator, a search summary, a secondary source, or a relayed table |
+| **Estimated** | Derived from market data, aggregators, or calculation with unverified or mixed inputs; "Estimated proxy" is its sub-type |
+| **Needs verification** | An important metric not found or not confirmed |
+| **Not disclosed** | The relevant primary sources were checked and do not contain the metric — a disclosure fact, not a performance judgment |
+
+Rules: external confirmation never upgrades a label to Verified — only directly reading the source does. "Reported" is Medium confidence at most and never enough by itself to upgrade a pillar. A score can use reported or estimated data cautiously; the label tells the reader how much to trust it. A derived ratio takes "Calculated — verified inputs" only when every input meets the verification standard; if any input is weaker, the ratio takes the weakest input's label. Only Verified or Calculated — verified inputs evidence can activate a Severe-flag score cap.
+
 ## Bank capital disambiguation
 
 Seven different things — never substitute one for another:
@@ -92,7 +116,7 @@ Valuation review includes: P/B or P/TBV · ROE/ROTE · cost-of-equity reference 
 
 Six cards: 1. Profitability (ROE, ROTE, ROA) · 2. Spread economics (NIM or risk-adjusted NIM) · 3. Efficiency (efficiency ratio) · 4. Credit quality (NPLs, NCOs, provisions, cost of risk) · 5. Capital and funding (CET1/CAR, deposits, LDR, liquidity) · 6. Valuation (P/B or P/TBV with ROE/ROTE and credit context).
 
-Each card shows: value · Positive/Watch/Negative rating · verification status (Verified / Estimated / Needs verification) · one-line explanation. Use concise tables, not long paragraphs.
+Each card shows: value · Positive/Watch/Negative rating · provenance label (per the v4 standard) · one-line explanation. Use concise tables, not long paragraphs.
 
 The first-pass bank score is always provisional unless: capital ratio verified, credit metrics verified, valuation data current, and at least partial peer comparison performed.
 
@@ -150,11 +174,11 @@ Treating deposits as corporate debt · using EV/EBITDA · calling low P/B "cheap
 | Efficiency ratio | 10% |
 | Valuation vs book (P/B vs ROE) | 15% |
 
-Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed; <50% weak or priced low for a reason. Any verified Severe flag caps the score at 50%; two or more usually mean high-risk / special situation. Verify flags against primary sources before capping. The score is a research organizer, not a prediction engine.
+Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed; <50% with sufficient evidence and no verified Severe flag = weak on current evidence. Any verified Severe flag caps the score at 50%; two or more usually mean high-risk / special situation. Verify flags against primary sources before capping. The score is a research organizer, not a prediction engine.
 
 ## Conclusion template
 
-End with exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name the evidence) / **high-risk, special situation** / **insufficient data** — plus data confidence (High/Medium/Low) and a two-sentence thesis including what would break it. No buy/sell/hold language.
+End with exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name the evidence) / **weak on current evidence** (score <50% with sufficient evidence and no verified Severe flag) / **high-risk, special situation** / **insufficient data** — plus data confidence (High/Medium/Low) and a two-sentence thesis including what would break it. No buy/sell/hold language.
 
 ## Final sector checklist
 
