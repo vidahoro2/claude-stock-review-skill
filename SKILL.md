@@ -61,11 +61,13 @@ Concise and dashboard-like. Short text + visual widget (see Step 5). Structure:
 
 **D. Severe red-flag override** — any *verified* Severe flag caps the score at 50%; two or more usually mean high-risk / special situation. If a candidate Severe flag can't be verified in the first pass, label it "unverified — needs verification" and do NOT cap yet; say what would verify it.
 
-**E. Red flags** — each with severity (Severe/Moderate/Minor), what it is, why it matters, and its status: verified / estimated / needs verification.
+**E. Expectations check** — run the Core Framework's expectations test when the valuation pillar would rest on a multiple above the company's own 5-year range, or when the thesis rests on segments with no achieved results. State what the current price requires (revenue CAGR over a stated horizon, steady-state margin, reinvestment, discount rate) and the residual — unproven — share of enterprise value, label the outputs "Estimated — expectations-implied", and apply the valuation-pillar caps. If the test is not triggered, say so in one line.
 
-**F. Data confidence** — High (recent filings/official disclosures) / Medium (presentations, calls, reputable providers) / Low (incomplete, stale, estimates). Name what's missing.
+**F. Red flags** — each with severity (Severe/Moderate/Minor), what it is, why it matters, and its status: verified / estimated / needs verification.
 
-**G. Neutral research conclusion** — exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name it) / **weak on current evidence** (score <50% with sufficient evidence and no verified Severe flag) / **high-risk, special situation** / **insufficient data**. One- or two-sentence thesis with what would break it.
+**G. Data confidence** — High (recent filings/official disclosures) / Medium (presentations, calls, reputable providers) / Low (incomplete, stale, estimates). Name what's missing.
+
+**H. Neutral research conclusion** — exactly one of: **strong on current evidence** / **mixed, needs more evidence** (name it) / **weak on current evidence** (score <50% with sufficient evidence and no verified Severe flag) / **high-risk, special situation** / **insufficient data**. One- or two-sentence thesis with what would break it.
 
 End every review with: *"This is general information only and not financial advice. For personal guidance, please talk to a licensed professional."*
 

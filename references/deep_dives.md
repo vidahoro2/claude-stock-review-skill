@@ -29,7 +29,7 @@ A focused peer table — no other sections. 4–8 genuine peers: company | ticke
 
 ## Deep dive: valuation
 
-Valuation only. The sector's correct methods; current multiples vs own 5-year range and vs peers; the growth/return profile that justifies or contradicts the multiple; **what the current valuation appears to assume** (reverse-engineer: growth rate, margin, or ROE needed to defend the price — label as illustrative); key valuation risks including the cyclical peak-earnings trap where relevant; quote external analyst consensus only with source. No recommendation.
+Valuation only. The sector's correct methods; current multiples vs own 5-year range and vs peers; the growth/return profile that justifies or contradicts the multiple; **what the current valuation requires** — run the Core Framework expectations test (required revenue CAGR over a stated horizon, steady-state margin, reinvestment, discount rate with its components, terminal growth no higher than the long-run risk-free rate; convert to absolute end-of-horizon revenue and test it against the company's own achieved record, the best verified peer analog at comparable scale, and current market size) plus the proven-vs-unproven enterprise-value split with the residual share, everything labeled "Estimated — expectations-implied"; key valuation risks including the cyclical peak-earnings trap where relevant; quote external analyst consensus only with source. No recommendation.
 
 ## Deep dive: risks
 
