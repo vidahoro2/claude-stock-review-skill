@@ -59,7 +59,7 @@ Concise and dashboard-like. Short text + visual widget (see Step 5). Structure:
 
 **C. Pillar ratings** — the packet's weights; for each pillar: name, weight, rating (Positive=2 / Watch=1 / Negative=0), and a one-line reason. Weighted total ÷ 2 = 0–100% score. Label ratings **provisional** where peer comparison hasn't been done yet — a first pass can check ranges and own history, but the four-comparisons test is only complete after peer work. The score is a research organizer, not a prediction engine.
 
-**D. Severe red-flag override** — any *verified* Severe flag caps the score at 50%; two or more usually mean high-risk / special situation. If a candidate Severe flag can't be verified in the first pass, label it "unverified — needs verification" and do NOT cap yet; say what would verify it.
+**D. Severe red-flag override** — any Severe flag supported by **Verified** or **Calculated — verified inputs** evidence caps the score at 50%; two or more usually mean high-risk / special situation. If a candidate Severe flag lacks that evidence in the first pass, label it "unverified — needs verification" and do NOT cap yet; say what would verify it.
 
 **E. Expectations check** — run the Core Framework's expectations test when the valuation pillar would rest on a multiple above the company's own 5-year range, or when the thesis rests on segments with no achieved results. State what the current price requires (revenue CAGR over a stated horizon, steady-state margin, reinvestment, discount rate) and the residual — unproven — share of enterprise value, label the outputs "Estimated — expectations-implied", and apply the valuation-pillar caps. If the test is not triggered, say so in one line.
 
@@ -161,12 +161,14 @@ That status is Medium confidence at most, never High confidence, and never enoug
 | Label | Meaning |
 |---|---|
 | **Verified** | The skill itself directly read the source document and quotes the exact label next to the value |
+| **Calculated — verified inputs** | Derived by a stated, reproducible formula whose inputs are each individually Verified; derived ratios are never plain "Verified" |
 | **User-provided filing excerpt** | The user pasted verbatim filing text containing the label and value; the skill quotes it, but could not independently open the document. Usable for rating decisions with provenance stated; not "Verified" |
 | **Reported, pending direct verification** | The value came from the user, another AI, an evaluator, a search summary, or a relayed table without verbatim source text |
 | **Estimated** | Derived from market data, aggregators, or calculation |
 | **Needs verification** | An important metric not found or not confirmed |
+| **Not disclosed** | Relevant primary sources were checked and do not contain the metric; this is a disclosure fact, not a performance judgment |
 
-External confirmation may inform the analysis, but it never upgrades the confidence label to Verified — only the skill independently reading the source does that. A score can use reported data cautiously; the label tells the reader how much to trust it.
+External confirmation may inform the analysis, but it never upgrades the confidence label to Verified — only the skill independently reading the source does that. A derived ratio takes **Calculated — verified inputs** only when every input is Verified; otherwise it inherits the weakest input's label. A score can use reported data cautiously, but only Verified or Calculated — verified inputs evidence can activate a Severe-flag cap.
 
 ### Verification affects confidence, not rating
 

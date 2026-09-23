@@ -1,6 +1,6 @@
 # Core Framework — Universal Stock Analysis Rules
 
-**Version 2.1.3 — Last updated 2026-08-23.** v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.4 — Last updated 2026-09-22.** Supersedes v2.1.3. v2.1.4 aligns the override rule with the provenance rules (a Severe flag evidenced by Verified or Calculated — verified inputs activates the cap) and adds "weak on current evidence" to the reusable prompt's conclusion list. v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
 
 Part of the Stock Analysis Modular System. Upload (or paste) this with the relevant sector guide or AI packet when reviewing one company.
 
@@ -47,7 +47,7 @@ Method: start from the 10-K competition section → add the GICS sub-industry li
 - **Moderate** — needs a convincing explanation before a positive conclusion.
 - **Severe** — usually disqualifying until resolved (uncovered dividend, <12-month runway, deposit flight, adverse reserve development, covenant/going-concern issues, restatements).
 
-**Override rule:** any verified Severe red flag caps the total score at 50% until resolved. Two or more Severe red flags usually disqualify the company from normal fundamental analysis (special-situation territory). Verify flags against primary sources before applying the cap.
+**Override rule:** any Severe red flag supported by Verified or Calculated — verified inputs evidence caps the total score at 50% until resolved. Two or more Severe red flags usually disqualify the company from normal fundamental analysis (special-situation territory). Verify flags against primary sources before applying the cap.
 
 **False precision:** the score is a research organizer, not a prediction engine. A 78% company is not automatically better than a 72% one. The score shows which pillar needs more research; judgment and the written thesis matter more than the number.
 
@@ -166,6 +166,6 @@ Ranges are rules of thumb calibrated June 2026 — refresh at least annually fro
 > 7. Severe red flags, if any
 > 8. Valuation method appropriate for the sector
 > 9. Data confidence level: High, Medium, or Low
-> 10. Neutral research conclusion: strong on current evidence; mixed / needs more evidence; high-risk / special situation; or insufficient data
+> 10. Neutral research conclusion: strong on current evidence; mixed / needs more evidence; weak on current evidence; high-risk / special situation; or insufficient data
 >
 > Use primary sources where possible, such as 10-Ks, 10-Qs, annual reports, earnings releases, and regulatory filings. Do not rely only on screeners or summaries.

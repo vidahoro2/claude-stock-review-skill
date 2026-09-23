@@ -17,7 +17,7 @@ The full fundamental review. Research beyond the first pass (additional filings,
 9. **Valuation** — the sector's method only; vs peers and own 5-year history; what the current price appears to assume; key valuation risks.
 10. **Risks and catalysts** — separate fundamental / valuation / balance-sheet / sector-macro risks; potential catalysts; what data would change the conclusion.
 11. **Source list** — primary vs secondary vs market-data; list unverified/estimated items.
-12. **Final neutral research conclusion** — one of the four labels, main reason, top 3 metrics to monitor, unresolved data gaps. Recompute the weighted score and state if it changed — with the verification evidence block for any metric that moved a rating.
+12. **Final neutral research conclusion** — one of the five labels (strong on current evidence / mixed, needs more evidence / weak on current evidence / high-risk, special situation / insufficient data), main reason, top 3 metrics to monitor, unresolved data gaps. Recompute the weighted score and state if it changed — with the verification evidence block for any metric that moved a rating.
 
 ## Verify missing data
 
