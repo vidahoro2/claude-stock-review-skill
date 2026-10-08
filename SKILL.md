@@ -15,7 +15,7 @@ The guide's analytical insight still governs everything: every sector has its ow
 
 Determine where the majority of **operating profit** (not revenue) comes from. For mixed businesses, pick the dominant segment's packet and note that other large segments deserve a separate pass. Packets with internal branch routing (Utilities, Consumer Services, Health Technology, Consumer Durables) apply their own branch and mixed-company rules.
 
-File preference (most token-efficient first): (1) the user's maintained markdown packets at `Stock_Analysis_Modular/Markdown/AI_Packets/` if that folder is available; (2) the bundled copy in this skill's `references/`. Read ONLY the one sector packet needed. Read `references/01_Core_Framework.md` only when sector classification is unclear, the business is mixed, or a universal rule needs detail.
+File preference (most token-efficient first): (1) the user's maintained markdown packets at `Stock_Analysis_Modular/Markdown/AI_Packets/` if that folder is available; (2) the bundled copy in this skill's `references/`. Read ONLY the one sector packet needed. Read the Core Framework when sector classification is unclear, the business is mixed, a universal rule needs detail, or the loaded packet delegates its evidence rules or expectations test to Core (the 13 v2.1.1 legacy-sector packets require it before scoring). Prefer `Stock_Analysis_Modular/Markdown/01_Core_Framework.md` with maintained packets; otherwise use `references/01_Core_Framework.md`. A delegated expectations test belongs to the first pass when triggered; do not wait for a requested deep dive.
 
 | Sector | Packet file |
 |---|---|
