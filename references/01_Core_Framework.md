@@ -1,6 +1,6 @@
 # Core Framework — Universal Stock Analysis Rules
 
-**Version 2.1.5 — Last updated 2026-09-22.** Supersedes v2.1.4. v2.1.5 adds one shared expectations-module sentence: where a sector packet defines an expectations adaptation, it governs the variables solved for and the value split (Banks and Insurers now define one). v2.1.4 aligns the override rule with the provenance rules (a Severe flag evidenced by Verified or Calculated — verified inputs activates the cap) and adds "weak on current evidence" to the reusable prompt's conclusion list. v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.6 — Last updated 2026-10-08.** Supersedes v2.1.5. v2.1.6 adds the development-stage routing precedence (core-revenue materiality test before operating-profit classification; Pre-Revenue Overlay) and a development-stage (non-biotech) row in the valuation-methods table. v2.1.5 adds one shared expectations-module sentence: where a sector packet defines an expectations adaptation, it governs the variables solved for and the value split (Banks and Insurers now define one). v2.1.4 aligns the override rule with the provenance rules (a Severe flag evidenced by Verified or Calculated — verified inputs activates the cap) and adds "weak on current evidence" to the reusable prompt's conclusion list. v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
 
 Part of the Stock Analysis Modular System. Upload (or paste) this with the relevant sector guide or AI packet when reviewing one company.
 
@@ -29,6 +29,8 @@ Good peers share most of: business model, geography, growth stage, margin struct
 Method: start from the 10-K competition section → add the GICS sub-industry list → filter to 5–10 genuine peers. If fewer than 4–5 exist, lean on the company's own history and soften relative-valuation conclusions.
 
 ## The first 10 things to check
+
+**Routing precedence (development-stage companies):** before classifying by operating profit, run the core-revenue materiality test in AI_Packet_Pre_Revenue_Overlay.md (TTM core commercial revenue ÷ TTM cash operating costs; < 25% is a routing heuristic, not an economic threshold). If it applies, pre-commercial biotech routes to Health Technology Branch 2, and every other company is scored by the Pre-Revenue Overlay, with its sector packet supplying context metrics and red flags only. Graduation to the sector packet requires the ratio ≥ 25% at four consecutive quarter-ends and meaningful sector headline metrics.
 
 1. Identify the business model and sector page. For mixed businesses, classify by where most operating profit comes from.
 2. Revenue trend over 5 years — growing, flat, shrinking? Organic or acquired?
@@ -103,6 +105,7 @@ Matters most for mining, energy, banks, staples/multinationals, industrials, and
 | Mining | NAV, through-cycle EV/EBITDA, cost-curve position, FCF yield | Single-year P/E; AISC outside precious metals |
 | Utilities | P/E vs EPS growth, yield spread, FFO/debt, allowed ROE | FCF alone |
 | Biotech (pre-commercial) | Cash runway, pipeline value, probability-adjusted NPV | P/E and revenue pre-approval |
+| Development-stage (non-biotech) | Cash runway & dilution, gate-by-gate scenario value, proven vs unproven EV split (Pre-Revenue Overlay) | P/E, EV/EBITDA, P/S on immaterial revenue, dividend metrics, utility allowed-ROE logic, transportation operating ratio, AISC or reserve life before production, management TAM figures as evidence |
 | Pharma / devices | P/E vs pipeline, FCF yield, dividend coverage | P/E without patent-cliff adjustment |
 | Retail | P/E, lease-adjusted EV/EBITDA, FCF yield, comps trend | Revenue growth without comps/inventory; leverage ignoring leases |
 | Consumer staples | P/E, dividend yield, FCF yield, organic growth | Headline growth without volume/price split |

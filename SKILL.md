@@ -1,6 +1,6 @@
 ---
 name: stock-review
-description: Fast, sector-aware fundamental stock review using the user's Stock Analysis Guide (v2.x packets), with a progressive workflow — compact scorecard first, deep dives on demand. Use this skill whenever the user asks to analyze, review, evaluate, score, or "run the guide" on a stock, ticker, or public company — e.g. "review DKNG", "analyze JPMorgan", "what does the guide say about NVDA", "stock review O" — and also for the follow-up actions it offers — "make deeper analysis", "verify missing data", "compare vs peers", "deep dive valuation/risks", "create full research memo". It classifies the company into one of 23 sectors, loads only that sector's packet, researches primary sources, and produces a neutral research conclusion. Never produces buy/sell/hold advice.
+description: Fast, sector-aware fundamental stock review using the user's Stock Analysis Guide (v2.x packets), with a progressive workflow — compact scorecard first, deep dives on demand. Use this skill whenever the user asks to analyze, review, evaluate, score, or "run the guide" on a stock, ticker, or public company — e.g. "review DKNG", "analyze JPMorgan", "what does the guide say about NVDA", "stock review O" — and also for the follow-up actions it offers — "make deeper analysis", "verify missing data", "compare vs peers", "deep dive valuation/risks", "create full research memo". It classifies the company into one of 23 sectors (development-stage companies with immaterial core revenue go first to the cross-sector Pre-Revenue Overlay), loads only that sector's packet, researches primary sources, and produces a neutral research conclusion. Never produces buy/sell/hold advice.
 ---
 
 # Stock Review (Progressive, Guide-Driven, Sector-Aware)
@@ -10,6 +10,8 @@ Analyze one public company using the Stock Analysis — Sector-by-Sector Guide (
 The guide's analytical insight still governs everything: every sector has its own metrics, its own "what NOT to use" list, and its own valuation toolkit. Importing another sector's metrics is the most common analytical mistake.
 
 ## Step 1 — Classify the company
+
+**First, the pre-revenue check:** if TTM core commercial revenue is below 25% of TTM cash operating costs (test defined in `AI_Packet_Pre_Revenue_Overlay.md`), route pre-commercial biotech to Health Technology Branch 2 and every other company to `AI_Packet_Pre_Revenue_Overlay.md` (read it with `01_Core_Framework.md`; the sector packet supplies only context metrics and red flags). Otherwise:
 
 Determine where the majority of **operating profit** (not revenue) comes from. For mixed businesses, pick the dominant segment's packet and note that other large segments deserve a separate pass.
 
@@ -41,7 +43,7 @@ File preference (most token-efficient first): (1) the user's maintained markdown
 | Staffing, consulting, info services | AI_Packet_Commercial_Services.md |
 | Wholesale distributors | AI_Packet_Distribution_Services.md |
 
-Tower companies are REITs. Pre-commercial biotech follows Health Technology's cash-runway logic. A fintech with a banking charter gets the Banks packet for its lending book.
+Tower companies are REITs. Pre-commercial biotech follows Health Technology Branch 2; other development-stage companies follow the Pre-Revenue Overlay. A fintech with a banking charter gets the Banks packet for its lending book.
 
 ## Step 2 — Bounded first-pass research
 
