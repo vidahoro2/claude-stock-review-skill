@@ -34,7 +34,7 @@ File preference (most token-efficient first): (1) the user's maintained markdown
 | Oilfield services, E&C, rental | AI_Packet_Industrial_Services.md |
 | Rail, airlines, trucking, shipping | AI_Packet_Transportation.md |
 | Food, beverage, household brands | AI_Packet_Consumer_Staples.md |
-| Autos, appliances, homebuilders | AI_Packet_Consumer_Durables.md |
+| Autos & auto parts, homebuilders, appliances & furniture, leisure products, apparel/footwear/luxury brands | AI_Packet_Consumer_Durables.md |
 | Store/e-commerce retailers | AI_Packet_Retail.md |
 | Restaurants, hotels, leisure, gaming | AI_Packet_Consumer_Services.md |
 | Telecom carriers, satellite | AI_Packet_Communications_Telecom.md |
