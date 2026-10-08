@@ -13,7 +13,7 @@ The guide's analytical insight still governs everything: every sector has its ow
 
 **First, the pre-revenue check:** if TTM core commercial revenue is below 25% of TTM cash operating costs (test defined in `AI_Packet_Pre_Revenue_Overlay.md`), route pre-commercial biotech to Health Technology Branch 2 and every other company to `AI_Packet_Pre_Revenue_Overlay.md` (read it with `01_Core_Framework.md`; the sector packet supplies only context metrics and red flags). Otherwise:
 
-Determine where the majority of **operating profit** (not revenue) comes from. For mixed businesses, pick the dominant segment's packet and note that other large segments deserve a separate pass.
+Determine where the majority of **operating profit** (not revenue) comes from. For mixed businesses, pick the dominant segment's packet and note that other large segments deserve a separate pass. Packets with internal branch routing (Utilities, Consumer Services, Health Technology, Consumer Durables) apply their own branch and mixed-company rules.
 
 File preference (most token-efficient first): (1) the user's maintained markdown packets at `Stock_Analysis_Modular/Markdown/AI_Packets/` if that folder is available; (2) the bundled copy in this skill's `references/`. Read ONLY the one sector packet needed. Read `references/01_Core_Framework.md` only when sector classification is unclear, the business is mixed, or a universal rule needs detail.
 
@@ -28,7 +28,7 @@ File preference (most token-efficient first): (1) the user's maintained markdown
 | Pharma, biotech, medical devices | AI_Packet_Health_Technology.md |
 | Hospitals, health insurers, providers | AI_Packet_Health_Services.md |
 | REITs and property companies | AI_Packet_REITs.md |
-| Electric, gas, water utilities | AI_Packet_Utilities.md |
+| Electric, gas, water utilities (Branch A); independent power producers, merchant generation, competitive retail electricity (Branch B) | AI_Packet_Utilities.md |
 | Oil & gas | AI_Packet_Energy_Oil_Gas.md |
 | Miners, steel, materials | AI_Packet_Mining_Metals.md |
 | Chemicals, paper, packaging | AI_Packet_Process_Industries.md |
@@ -55,15 +55,15 @@ Source hierarchy: company filings (10-K, 10-Q, annual report, earnings release) 
 
 Concise and dashboard-like. Short text + visual widget (see Step 5). Structure:
 
-**A. Header** — company, ticker, sector packet used, analysis date, data-freshness note (e.g., "latest filing: Q1 10-Q, May 2026").
+**A. Header** — company, ticker, sector packet used (and branch, where the packet routes by branch), analysis date, data-freshness note (e.g., "latest filing: Q1 10-Q, May 2026").
 
-**B. Five to six key metric cards** — the weighted score plus the 4–5 most decision-relevant metrics *for that sector* (banks: ROE/ROTE, NIM, NPLs/charge-offs, CET1, P/B-with-ROE; SaaS: growth, Rule of 40, NRR, FCF margin, SBC/dilution, EV/Sales; REITs: FFO/AFFO growth, AFFO payout, occupancy, debt/EBITDAre, P/FFO or NAV; energy: FCF yield, corporate breakeven, net debt/EBITDA, reserve life, shareholder yield). Each with its Positive/Watch/Negative verdict.
+**B. Five to six key metric cards** — the weighted score plus the 4–5 most decision-relevant metrics *for that sector* (banks: ROE/ROTE, NIM, NPLs/charge-offs, CET1, P/B-with-ROE; SaaS: growth, Rule of 40, NRR, FCF margin, SBC/dilution, EV/Sales; REITs: FFO/AFFO growth, AFFO payout, occupancy, debt/EBITDAre, P/FFO or NAV; energy: FCF yield, corporate breakeven, net debt/EBITDA, reserve life, shareholder yield; merchant power: residual earnings sensitivity, net debt/adjusted EBITDA, liquidity vs stressed needs, FCFbG conversion, valuation cross-checks). Each with its Positive/Watch/Negative verdict.
 
 **C. Pillar ratings** — the packet's weights; for each pillar: name, weight, rating (Positive=2 / Watch=1 / Negative=0), and a one-line reason. Weighted total ÷ 2 = 0–100% score. Label ratings **provisional** where peer comparison hasn't been done yet — a first pass can check ranges and own history, but the four-comparisons test is only complete after peer work. The score is a research organizer, not a prediction engine.
 
 **D. Severe red-flag override** — any Severe flag supported by **Verified** or **Calculated — verified inputs** evidence caps the score at 50%; two or more usually mean high-risk / special situation. If a candidate Severe flag lacks that evidence in the first pass, label it "unverified — needs verification" and do NOT cap yet; say what would verify it.
 
-**E. Expectations check** — run the Core Framework's expectations test when the valuation pillar would rest on a multiple above the company's own 5-year range, or when the thesis rests on segments with no achieved results. State what the current price requires (revenue CAGR over a stated horizon, steady-state margin, reinvestment, discount rate) and the residual — unproven — share of enterprise value; where the loaded packet defines an expectations adaptation, it replaces these variables and the split (Banks and Insurers: required ROE/ROTE solved from P/B or P/TBV and the cost of equity, residual share of market cap — insurance brokers keep the standard form), label the outputs "Estimated — expectations-implied", and apply the valuation-pillar caps. If the test is not triggered, say so in one line.
+**E. Expectations check** — run the Core Framework's expectations test when the valuation pillar would rest on a multiple above the company's own 5-year range, or when the thesis rests on segments with no achieved results. State what the current price requires (revenue CAGR over a stated horizon, steady-state margin, reinvestment, discount rate) and the residual — unproven — share of enterprise value; where the loaded packet defines an expectations adaptation, it replaces these variables and the split (Banks and Insurers: required ROE/ROTE solved from P/B or P/TBV and the cost of equity, residual share of market cap — insurance brokers keep the standard form; Utilities Branch B: an explicit cash-flow model that funds implied growth and reflects contract expiry and asset life), label the outputs "Estimated — expectations-implied", and apply the valuation-pillar caps. If the test is not triggered, say so in one line. **Required procedure files load automatically:** when the loaded packet names a procedures file for the first pass (Utilities Branch B → `references/merchant_power_procedures.md`, when the test triggers or valuation would rate above Watch), read it now — it is part of the first pass, unlike `deep_dives.md`. If the procedure cannot be completed, valuation is Needs verification and scores no higher than Watch.
 
 **F. Red flags** — each with severity (Severe/Moderate/Minor), what it is, why it matters, and its status: verified / estimated / needs verification.
 
@@ -82,7 +82,7 @@ After the scorecard, offer these actions — as widget buttons if a widget tool 
 3. Compare vs peers
 4. Deep dive: valuation
 5. Deep dive: risks
-6. Deep dive: [the company's weakest/sector-specific area — adapt: banks → credit quality / capital / deposits; SaaS → retention & Rule of 40 / SBC & dilution; REITs → dividend coverage / debt maturities / NAV; energy → breakevens / reserves / capital discipline]
+6. Deep dive: [the company's weakest/sector-specific area — adapt: banks → credit quality / capital / deposits; SaaS → retention & Rule of 40 / SBC & dilution; REITs → dividend coverage / debt maturities / NAV; energy → breakevens / reserves / capital discipline; merchant power → hedge book & delivery exposure / liquidity & collateral / market exposure by region]
 7. Create full research memo
 
 When the user selects an action (by button or words), read `references/deep_dives.md` and follow the matching section. Do not load it before then.
@@ -103,7 +103,7 @@ Render the first-pass scorecard as a compact inline widget (call the visualizati
 6. Why the label matches the sector guide's definition of the metric
 7. Whether it updates a rating, and what the score becomes
 
-Anything less is **estimated** or **needs verification** — usable context, never pillar-upgrade evidence. Search-engine summaries, AI overviews, and aggregator paraphrases are NEVER verification, even when they cite a filing: the score may only move on text actually read from the source document.
+Anything less is **Reported**, **Estimated**, or **Needs verification** — usable for provisional first-pass ratings, never for changing a rating in a follow-up (see Evidence for ratings below). Search-engine summaries, AI overviews, aggregator paraphrases, and any model-generated summary are NEVER verification, even when they cite a filing or reproduce its labels and numbers.
 
 **Label-match rule:** never reuse a percentage from a nearby table unless the label exactly matches the intended metric. If the filing shows "Efficiency Ratio 16.6%," it cannot be used as CAR, CET1, capital adequacy, or any other capital metric. Identical values for different metrics in the same filing are a known trap — when two candidate numbers match, treat both as suspect until the labels are read.
 
@@ -133,7 +133,7 @@ Run this fallback ladder in order:
    - attached financial statements,
    - related 6-K, 10-Q, 20-F, or annual-report exhibits,
    - FilingSummary.xml,
-   - XBRL or R-file note documents,
+   - XBRL or R-file note documents — read the relevant R-file from the same filing accession (map numbers via FilingSummary.xml; numbering is filing-specific), checking table title, units, period, entity/segment columns, and associated footnotes; if the site blocks direct downloads, extract the page text in a browser,
    - complete-submission text files only when the filing is small enough to load reliably.
 5. **Try regulator or Pillar 3 disclosures** if the company filing does not expose the metric clearly. For banks, this may include central-bank filings, prudential disclosures, call reports, or local regulatory capital documents.
 6. Only after these fallbacks fail, report the metric as:
@@ -150,13 +150,13 @@ When reporting failure, name:
 
 ### Verification boundary
 
-A metric may be marked **Verified** only when the skill itself has read the exact source label next to the value and can quote it.
+A metric may be marked **Verified** only when the skill itself has read the exact source label next to the value and can quote it. Verification depends on inspecting the source content itself — label, value, period, units, scope, and relevant footnotes — not on the tool's name. Model-generated summaries remain **Reported, pending direct verification** even when they reproduce labels or numbers. Practical note: a web-fetch tool that answers through a summarizing model returns a summary, so its output falls under that rule.
 
 Relayed tables, evaluator comments, search summaries, and aggregator snippets can improve context, but they cannot verify a metric.
 
 If a value is supplied by another evaluator but the skill has not read it directly, label it:
 **"Reported, pending direct verification."**
-That status is Medium confidence at most, never High confidence, and never enough by itself to upgrade a pillar.
+That status is Medium confidence at most, never High confidence; it can support a provisional first-pass rating but never a follow-up rating change.
 
 **Provenance labels** — the confidence label must reflect what the skill actually verified, not how plausible the number is:
 
@@ -171,6 +171,8 @@ That status is Medium confidence at most, never High confidence, and never enoug
 | **Not disclosed** | Relevant primary sources were checked and do not contain the metric; this is a disclosure fact, not a performance judgment |
 
 External confirmation may inform the analysis, but it never upgrades the confidence label to Verified — only the skill independently reading the source does that. A derived ratio takes **Calculated — verified inputs** only when every input is Verified; otherwise it inherits the weakest input's label. A score can use reported data cautiously, but only Verified or Calculated — verified inputs evidence can activate a Severe-flag cap.
+
+**Evidence for ratings:** first-pass factual ratings may use Reported evidence provisionally. New or revised factual inputs used to change a rating in a follow-up require Verified or Calculated — verified inputs evidence. Model outputs keep their applicable Estimated label even when every input is Verified; changes in assumptions, judgments, arithmetic, or framework version require an explicit audit trail and must not be described as newly verified performance.
 
 ### Verification affects confidence, not rating
 
