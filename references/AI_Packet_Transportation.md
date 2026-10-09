@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Transportation
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; operating-ratio bands are railroad anchors with the 75–80% gap closed, and one profitability measure is rated per sub-mode. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Airlines, railroads, trucking, logistics, shipping* — GICS: Industrials (Transportation — airlines, rail, trucking, marine, logistics)
 
@@ -68,8 +68,8 @@ Capital-intensive and cyclical, with very different sub-models. Railroads are hi
 
 | Metric | Positive | Watch | Negative | How to read it |
 |---|---|---|---|---|
-| **Operating ratio (rail/truck)** | < 60% (rail) | 60–75% | > 80% | Costs ÷ revenue — lower is better; rails are best-in-class. |
-| **Operating margin** | > 15% | 5–15% | < 5% | Airlines sit low; rails sit high — peer-relative only. |
+| **Operating ratio (rail/truck)** | < 60% (rail) | 60–75% (rail) | > 75% (rail) | Costs ÷ revenue — lower is better. Bands are railroad anchors; trucking runs structurally higher, so rate it against trucking peers and own history. Rated for rail and trucking only. |
+| **Operating margin** | > 15% | 5–15% | < 5% | Airlines sit low; rails sit high — peer-relative only. Rated for airlines, shipping and logistics; for rail and trucking it is a cross-check on operating ratio, not a second rating. |
 | **Load factor / utilization** | > 80% | 70–80% | < 70% | How full the planes/trucks/trains run. |
 | **Volume trend** | Growing | Flat | Falling | Freight volumes are an economy-wide leading indicator. |
 | **Net debt/EBITDA** | < 2.5x | 2.5–3.5x | > 3.5x | Heavy assets; leverage bites in downturns. |
@@ -83,12 +83,14 @@ Capital-intensive and cyclical, with very different sub-models. Railroads are hi
 
 **Red flags:**
 
-- **Severe** — Fare wars / overcapacity in airlines
+- **Severe** — Fare wars / overcapacity in airlines. *Condition:* industry overcapacity alone is not a company event. Severe when the company's own unit revenue falls year over year for at least two consecutive quarters, its trailing-twelve-month operating result is negative, and it discloses a funding need not covered by cash, committed facilities and asset sales already contracted. Otherwise Moderate.
 - **Moderate** — Fuel price spikes without surcharge pass-through
 - **Moderate** — Volume declines signalling a broader slowdown
 - **Minor** — One-off service disruptions raising the operating ratio
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -100,7 +102,7 @@ Capital-intensive and cyclical, with very different sub-models. Railroads are hi
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

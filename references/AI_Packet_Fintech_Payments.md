@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Fintech & Payment Networks
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Card networks, payment processors, fintech platforms* — GICS: Financials (Financial Services — Transaction & Payment Processing); some names classified in Information Technology
 
@@ -83,12 +83,14 @@ Toll roads on money movement. Networks (Visa/Mastercard-type models) earn tiny f
 
 **Red flags:**
 
-- **Severe** — Take rate falling fast while volume growth also slows
+- **Severe** — Take rate falling fast while volume growth also slows. *Condition:* on a year-over-year basis, the take rate is in this packet's 'Rapid decline' reading and payment-volume growth is slowing in at least four consecutive quarters, after separating any mix shift the company discloses. A take rate calculated from verified net revenue and volume qualifies. One of the two alone, or a slow decline, is Moderate.
 - **Moderate** — Regulatory action on interchange or routing rules
 - **Moderate** — Credit losses rising at fintechs that hold lending risk
 - **Minor** — Heavy SBC at younger fintechs
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -100,7 +102,7 @@ Toll roads on money movement. Networks (Visa/Mastercard-type models) earn tiny f
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

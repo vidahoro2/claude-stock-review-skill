@@ -1,6 +1,6 @@
 # Core Framework — Universal Stock Analysis Rules
 
-**Version 2.1.7 — Last updated 2026-10-08.** Supersedes v2.1.6. v2.1.7 splits the utilities valuation row into regulated (Branch A) and competitive generation and retail (Branch B), and rewrites the shared evidence-for-ratings rule (first-pass ratings may use Reported evidence provisionally; follow-up rating changes need Verified inputs; model outputs stay Estimated; assumption, arithmetic, or framework changes go through the audit trail) and the matching score-change rule. v2.1.6 adds the development-stage routing precedence (core-revenue materiality test before operating-profit classification; Pre-Revenue Overlay) and a development-stage (non-biotech) row in the valuation-methods table. v2.1.5 adds one shared expectations-module sentence: where a sector packet defines an expectations adaptation, it governs the variables solved for and the value split (Banks and Insurers now define one). v2.1.4 aligns the override rule with the provenance rules (a Severe flag evidenced by Verified or Calculated — verified inputs activates the cap) and adds "weak on current evidence" to the reusable prompt's conclusion list. v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.8 — Last updated 2026-10-08.** Supersedes v2.1.7. v2.1.8 adds the shared scoring rules that the 13 legacy-sector packets delegate to this framework: applicability and the withheld score, bands as model-specific anchors, and written conditions for Severe caps; sector pillar weights are unchanged. v2.1.7 splits the utilities valuation row into regulated (Branch A) and competitive generation and retail (Branch B), and rewrites the shared evidence-for-ratings rule (first-pass ratings may use Reported evidence provisionally; follow-up rating changes need Verified inputs; model outputs stay Estimated; assumption, arithmetic, or framework changes go through the audit trail) and the matching score-change rule. v2.1.6 adds the development-stage routing precedence (core-revenue materiality test before operating-profit classification; Pre-Revenue Overlay) and a development-stage (non-biotech) row in the valuation-methods table. v2.1.5 adds one shared expectations-module sentence: where a sector packet defines an expectations adaptation, it governs the variables solved for and the value split (Banks and Insurers now define one). v2.1.4 aligns the override rule with the provenance rules (a Severe flag evidenced by Verified or Calculated — verified inputs activates the cap) and adds "weak on current evidence" to the reusable prompt's conclusion list. v2.1.3 adds the expectations-embedded valuation module: the universal expectations test (reverse-solve the price for required growth, margin, reinvestment and discount rate), the proven-vs-unproven enterprise-value split with its valuation-pillar caps, and the "Estimated — expectations-implied" sub-label. v2.1.2 adds the weak-on-current-evidence conclusion category. v2.1.1 adds the v4 provenance-label table (Calculated — verified inputs, Not disclosed; Severe-flag caps require verified evidence). Educational framework — not investment advice. No buy/sell/hold language.
 
 Part of the Stock Analysis Modular System. Upload (or paste) this with the relevant sector guide or AI packet when reviewing one company.
 
@@ -8,7 +8,7 @@ Part of the Stock Analysis Modular System. Upload (or paste) this with the relev
 
 - **Learning:** full Master Guide.
 - **Analyzing one stock:** this Core Framework + the relevant Sector guide.
-- **Most token-efficient AI analysis:** the relevant AI Packet only.
+- **Most token-efficient AI analysis:** the relevant AI Packet, plus this Core Framework whenever the packet delegates shared scoring or its expectations test to it.
 - **Updating:** update the Master Guide first, then regenerate Core, Sector files, and AI Packets.
 
 ## The four comparisons (always)
@@ -49,9 +49,43 @@ Method: start from the 10-K competition section → add the GICS sub-industry li
 - **Moderate** — needs a convincing explanation before a positive conclusion.
 - **Severe** — usually disqualifying until resolved (uncovered dividend, <12-month runway, deposit flight, adverse reserve development, covenant/going-concern issues, restatements).
 
-**Override rule:** any Severe red flag supported by Verified or Calculated — verified inputs evidence caps the total score at 50% until resolved. Two or more Severe red flags usually disqualify the company from normal fundamental analysis (special-situation territory). Verify flags against primary sources before applying the cap.
+**Override rule:** any Severe red flag supported by Verified or Calculated — verified inputs evidence caps the total score at 50% until resolved. Two or more Severe red flags usually disqualify the company from normal fundamental analysis (special-situation territory). Verify flags against primary sources before applying the cap. For packets that delegate shared scoring to this framework, the condition written beside the flag must also be met (Shared scoring rules, section 3).
 
 **False precision:** the score is a research organizer, not a prediction engine. A 78% company is not automatically better than a 72% one. The score shows which pillar needs more research; judgment and the written thesis matter more than the number.
+
+## Shared scoring rules: applicability, bands, and Severe conditions
+
+These rules govern the packets that delegate shared scoring to this section (the 13 legacy-sector packets). Strict packets keep their own execution rules. Apply them in this order, before rating pillars or computing a percentage.
+
+### 1. Applicability
+
+Decide from the business model whether each pillar's evidence exists for this company. A structurally absent activity (an exchange has no assets under management) is different from a relevant metric that is undisclosed, unverified, negative, or temporarily depressed: missing evidence never makes a pillar inapplicable. State the reason for any inapplicability finding.
+
+- **Packet-defined replacement:** where the packet names alternative evidence for the same pillar, use it at the pillar's original weight.
+- **Compound pillar:** where one component is inapplicable, rate the pillar on the remaining component if it still tests the pillar's purpose (a "FCF & dividend cover" pillar is rated on free cash flow for a non-payer).
+- **No replacement:** do not invent one, do not assign 0 or Watch to fill the pillar, and do not remove or redistribute its weight — weights are fixed so that scores stay comparable. Show **"Score withheld — the packet defines no scoring model for this business"**, keep the metric table and every pillar that can be rated, and name the packet upgrade required. Conclude **mixed, needs more evidence**, stating that the open item is the framework, not company data — unless a qualifying Severe flag or a dominant binary outcome supports **high-risk, special situation**, or missing company evidence independently supports **insufficient data**.
+
+### 2. Bands, comparisons, and floors
+
+- **Anchors, not rules:** a numeric band describes the business model named in its row. Rate each metric with the four comparisons — own history, model-matched peers, cycle, growth/return profile — and say why whenever the rating differs from the band. A band written for one model cannot rate another (a card-network margin band does not make a processor Negative).
+- **What stays binding:** regulatory requirements, contractual covenants, limits or caps a packet states as hard rules, the evidence rules, "Guidance is not achievement", and the expectations-test caps. Peer rank never overrides these.
+- **Floor for Positive:** neither a band nor peer rank supports Positive on a profitability or return metric when achieved returns are shown not to cover the cost of capital (ROE/ROTE versus cost of equity where the packet uses them), or cash generation is shown not to cover interest, lease and other fixed charges through the cycle — count each charge once. The rating is then no higher than Watch — keep Negative where the evidence warrants it; this is a ceiling on that rating, not a Severe cap. Run the check whenever a rating above the band rests on peer rank. State the basis; a cost-of-capital figure is Estimated.
+- **Endpoints:** a range written a–b includes both ends. Where two descriptive bands share an endpoint, the value takes the less favorable band; regulatory limits, covenants and packet hard rules keep their own operators.
+- **Invalid denominators:** a ratio whose denominator is zero or negative (net debt/EBITDA with EBITDA at or below zero, P/E on losses) has no band reading and is never read as low leverage or a cheap multiple. Rate from the underlying figures and say so.
+- **Uncovered values:** a value that falls in no band, or meets only part of a band's stated condition (a level without its trend), keeps its own provenance label. Rate it from own history and model-matched peers, mark the rating provisional, and name the gap and any missing comparison in the output. Incomplete comparison evidence cannot support Positive, and an anchor gap alone never withholds the percentage. Never interpolate silently.
+- **One measure per assessment:** do not rate two expressions of the same economics and keep the better one. Transportation: operating ratio for rail and trucking, operating margin for the other sub-modes; the other measure is a cross-check once scope and adjustments match.
+
+### 3. Severe-flag conditions
+
+A flag listed as Severe names a candidate. It activates the 50% cap only when Verified or Calculated — verified inputs evidence shows that this company meets the condition written beside the flag: the event, the company's own exposure to it, and the stated terms. A ratio the review calculates from verified inputs qualifies; the company need not publish it. An industry condition by itself (overcapacity, a price war, new capacity) never qualifies; neither does an analyst-designed stress case, which stays Estimated.
+
+- **Materiality:** duration alone does not qualify. Before capping, show the actual size of the adverse change or deficit and the exposure affected, both against the group, and say why the financial effect is material — on Verified or Calculated — verified inputs evidence. The share of the business exposed is not the amount lost. History is context, not a veto: a recurring deficit stays eligible. A trivial effect, or an event confined to an immaterial part of the group, is Moderate or Minor.
+- **Condition not met:** report the flag as Moderate (Minor if immaterial) and state which part of the condition is unmet. Evidence weaker than Verified leaves it a provisional warning; say what would verify it.
+- **Flag with no written condition:** it caps only when the evidence shows one of the Severe outcomes listed under "Red-flag severity & override rule" above; otherwise treat it as Moderate.
+- **Forecasts and charges:** a guidance cut verifies that management changed its forecast, not the realized consequence, and an impairment verifies the charge, not a funding consequence. Neither meets a condition by itself.
+- **Counting:** several signs of one underlying event are one Severe flag.
+- **Resolution:** the cap lifts when the condition is no longer met over its full stated lookback, on eligible evidence; a missing disclosure is not a cure. Say so in the output.
+- **Display:** show the uncapped score, the condition met with its provenance, and the displayed score. The cap is a ceiling: it never raises a score that is already below 50%. A withheld score stays withheld; report the flag and its effect on the conclusion in words.
 
 ## Universal core framework
 
@@ -151,7 +185,7 @@ Ranges are rules of thumb calibrated June 2026 — refresh at least annually fro
 | Conclusion | When to use |
 |---|---|
 | Strong on current evidence | Most pillars Positive, no Severe flags, valuation reasonable, data confidence High |
-| Mixed / needs more evidence | Score ~50–75% or open questions; name the specific evidence needed |
+| Mixed / needs more evidence | Score ~50–75% or open questions; name the specific evidence needed. Also used when a score is withheld under the applicability rule: name the framework gap, not missing company data |
 | Weak on current evidence | Score <50% with sufficient evidence and no verified Severe flag — clearly weak, but not a special situation |
 | High-risk / special situation | Verified Severe flag(s), or binary outcomes dominate |
 | Insufficient data | Key metrics unverifiable from primary sources; state what is missing |

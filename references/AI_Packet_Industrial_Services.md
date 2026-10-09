@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Industrial Services
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; the book-to-bill Watch band now covers a ratio above 1.0 that is not rising. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Oilfield services, engineering & construction, equipment rental* — GICS: Energy (Energy Equipment & Services) and Industrials (Construction & Engineering; rental in Capital Goods/Trading Companies)
 
@@ -68,7 +68,7 @@ Project- and activity-driven, often tied to energy or construction cycles. Backl
 
 | Metric | Positive | Watch | Negative | How to read it |
 |---|---|---|---|---|
-| **Backlog / book-to-bill** | > 1.0 & rising | ~1.0 | < 1.0 | Visibility into future work — but check contract quality too. |
+| **Backlog / book-to-bill** | > 1.0 & rising | ~1.0, or > 1.0 but not rising | < 1.0 | Visibility into future work — but check contract quality too. |
 | **Operating margin** | > 10% | 4–10% | < 4% | Watch for project cost overruns eroding margin. |
 | **ROIC** | > 10% | 6–10% | < 6% | Capital efficiency in an asset-heavy field. |
 | **Net debt/EBITDA** | < 2.5x | 2.5–3.5x | > 3.5x | Cyclical revenue needs a clean balance sheet. |
@@ -82,12 +82,14 @@ Project- and activity-driven, often tied to energy or construction cycles. Backl
 
 **Red flags:**
 
-- **Severe** — Fixed-price contracts signed before an inflationary spike
-- **Severe** — Backlog being cancelled or indefinitely delayed
+- **Severe** — Fixed-price contracts signed before an inflationary spike. *Condition:* recognized losses or provisions on fixed-price work turn the operating result of the segment or of the group negative for the period, and fixed-price backlog exposed to the same costs remains (state it against annual revenue). Fixed-price exposure with no recognized losses is Moderate.
+- **Severe** — Backlog being cancelled or indefinitely delayed. *Condition:* disclosed cancellations, or work the company reports as suspended or indefinitely delayed, exceed new awards over the trailing twelve months (net awards negative), or affect work scheduled for the next twelve months in an amount the company itself describes as material; state them against beginning backlog. Otherwise Moderate.
 - **Moderate** — Dependence on one commodity or one customer
 - **Minor** — Working-capital swings around big project milestones
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -99,7 +101,7 @@ Project- and activity-driven, often tied to energy or construction cycles. Backl
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

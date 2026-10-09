@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Producer Manufacturing
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; the book-to-bill Watch band now covers a ratio above 1.0 that is not rising. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Industrial machinery, electrical equipment, capital goods* — GICS: Industrials (Capital Goods — machinery, electrical equipment, building products)
 
@@ -71,7 +71,7 @@ Cyclical builders of equipment. Backlog and book-to-bill tell you about future r
 | **Revenue growth** | > 6% | 0–6% | Declining | Tied to customers' capex cycles. |
 | **Operating margin** | > 15% | 8–15% | < 8% | Best-in-class industrials hit mid-teens or higher. |
 | **ROIC** | > 12% | 8–12% | < 8% | The key quality gauge for industrials. |
-| **Backlog / book-to-bill** | > 1.0 & rising | ~1.0 | < 1.0 | Future revenue visibility; falling backlog is an early warning. |
+| **Backlog / book-to-bill** | > 1.0 & rising | ~1.0, or > 1.0 but not rising | < 1.0 | Future revenue visibility; falling backlog is an early warning. |
 | **Aftermarket / service mix** | > 30% of revenue | 15–30% | < 15% | Recurring service revenue cushions the cycle. |
 | **Net debt/EBITDA** | < 2.5x | 2.5–3.5x | > 3.5x | Manage leverage given cyclicality. |
 
@@ -83,12 +83,14 @@ Cyclical builders of equipment. Backlog and book-to-bill tell you about future r
 
 **Red flags:**
 
-- **Severe** — Backlog cancellations, not just slower orders
+- **Severe** — Backlog cancellations, not just slower orders. *Condition:* net orders (new orders less cancellations and de-bookings) are below zero for a reporting period in a segment that is material to the group, or cancellations remove work scheduled for the next twelve months in an amount the company itself describes as material; state cancellations against beginning backlog. Isolated or small cancellations are Moderate or Minor.
 - **Moderate** — Backlog shrinking for consecutive quarters
 - **Moderate** — Margin squeeze from input costs without pricing response
 - **Minor** — Heavy exposure to a single cyclical end-market
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -100,7 +102,7 @@ Cyclical builders of equipment. Backlog and book-to-bill tell you about future r
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

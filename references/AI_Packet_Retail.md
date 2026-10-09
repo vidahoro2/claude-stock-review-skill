@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Retail
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; the same-store-sales Watch band now covers 0–1% and Negative is defined as below 0%. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Stores, e-commerce, omnichannel retailers* — GICS: Consumer Discretionary (Consumer Discretionary Distribution & Retail); grocers/drugstores in Consumer Staples (Distribution & Retail)
 
@@ -68,7 +68,7 @@ A thin-margin volume game. Same-store sales and inventory management are everyth
 
 | Metric | Positive | Watch | Negative | How to read it |
 |---|---|---|---|---|
-| **Same-store sales growth** | > 4% | 1–4% | Negative | The single most-watched retail metric; split traffic vs ticket. |
+| **Same-store sales growth** | > 4% | 0–4% | < 0% | The single most-watched retail metric; split traffic vs ticket. |
 | **Gross margin trend** | Stable / rising | Slipping | Falling fast | Level varies widely by format; trend vs peers is what matters. |
 | **Markdown & shrink trend** | Low & stable | Rising | Spiking | Markdowns = demand misjudged; shrink (theft/loss) eats thin margins. |
 | **Inventory turns** | High & stable | Slowing | Falling | Slow turns = markdowns coming and cash tied up. |
@@ -85,12 +85,14 @@ A thin-margin volume game. Same-store sales and inventory management are everyth
 
 **Red flags:**
 
-- **Severe** — Negative comps plus rising inventory — the markdown spiral
+- **Severe** — Negative comps plus rising inventory — the markdown spiral. *Condition:* comparable sales are negative and inventory grows faster than sales in at least two consecutive quarters on a matched scope (same store base, acquisitions excluded), with gross margin falling over the same periods. A build the company disclosed in advance is context to weigh, not an exemption. Negative comps with inventory in line is Moderate.
 - **Moderate** — Markdowns and shrink rising together
 - **Moderate** — Losing share to online/discount competitors
 - **Minor** — One soft quarter against a tough prior-year comp
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -102,7 +104,7 @@ A thin-margin volume game. Same-store sales and inventory management are everyth
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

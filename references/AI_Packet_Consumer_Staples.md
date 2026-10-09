@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Consumer Staples
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; the P/E and dividend-yield rows now say how to rate values outside their bands. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Food, beverage, household & personal products* — GICS: Consumer Staples (Food, Beverage & Tobacco; Household & Personal Products)
 
@@ -72,8 +72,8 @@ Defensive and steady. People buy these in any economy, so the story is brand str
 | **Volume vs price split** | Both positive | Price-only growth | Volumes falling | Growth that is all price increases eventually breaks. |
 | **Gross margin** | > 40% | 30–40% | < 30% | Strong brands command higher, stable margins. |
 | **Operating margin** | > 18% | 12–18% | < 12% | Consistency matters more than the level. |
-| **Dividend yield + growth** | 2–4%, growing | 0–2% | Cut | Look for steady raises with a covered payout. |
-| **P/E** | 18–25 | 25–30 | > 30 | Quality staples carry a premium, but not an unlimited one. |
+| **Dividend yield + growth** | 2–4%, growing | 0–2% | Cut | Look for steady raises with a covered payout. A 2–4% yield that is not growing is Watch. Above 4%: rate on coverage and payout policy, not on the yield level. A non-payer is not rated on this row. |
+| **P/E** | 18–25 | 25–30 | > 30 | Quality staples carry a premium, but not an unlimited one. Anchors only: rate against own 5-year range and peers. Below 18 is not automatically Positive — with falling volumes a low multiple is a warning, so check the volume trend first. |
 
 **Formulas:** Organic growth = reported growth − M&A effect − currency effect (disclosed by the company). Gross margin = gross profit ÷ revenue. Payout ratio = dividends ÷ net income (check against FCF too).
 
@@ -83,12 +83,14 @@ Defensive and steady. People buy these in any economy, so the story is brand str
 
 **Red flags:**
 
-- **Severe** — Volumes declining for a year+ while price hikes mask it
+- **Severe** — Volumes declining for a year+ while price hikes mask it. *Condition:* organic volume is negative in at least four consecutive quarters while organic sales stay positive on price; show both series. Where the company reports only volume/mix, say so and treat the reading as provisional, not as physical volume. A shorter decline is Moderate.
 - **Moderate** — Private-label / store brands visibly taking share
 - **Moderate** — Input-cost inflation squeezing margins without pricing power
 - **Minor** — Currency drag on reported (not organic) numbers
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -100,7 +102,7 @@ Defensive and steady. People buy these in any economy, so the story is brand str
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Health Services
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap; the MLR Watch band now covers 88–90% and the row states its basis and mix limits. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Hospitals, managed care, health insurers, care providers* — GICS: Health Care (Health Care Providers & Services)
 
@@ -69,7 +69,7 @@ Volume- and reimbursement-driven. Margins are thin and heavily shaped by governm
 | Metric | Positive | Watch | Negative | How to read it |
 |---|---|---|---|---|
 | **Revenue growth** | > 6% | 2–6% | < 2% | Driven by admissions, enrollment, and reimbursement rates. |
-| **Medical loss ratio (insurers)** | 80–85% | 85–88% | > 90% | Too high crushes profit; too low invites regulatory pushback. |
+| **Medical loss ratio (insurers)** | 80–85% | 85–90% | > 90% | Too high crushes profit; too low invites regulatory pushback. Anchors fit a commercial-weighted book on the company's reported basis; do not assume it matches the regulatory ratio used for rebates — reconcile the definitions. Rate Medicaid- or Medicare-weighted books against mix-matched peers and own history. Below 80% is not automatically Positive — check rebate liabilities and whether pricing can hold. |
 | **Operating margin** | > 8% | 3–8% | < 3% | Structurally thin; consistency is the signal. |
 | **ROIC** | > 10% | 6–10% | < 6% | Scale and efficiency separate winners. |
 | **Debt/EBITDA** | < 3x | 3–4x | > 4x | Hospital operators often carry meaningful debt. |
@@ -82,12 +82,14 @@ Volume- and reimbursement-driven. Margins are thin and heavily shaped by governm
 
 **Red flags:**
 
-- **Severe** — Adverse government reimbursement change hitting a core line of business
+- **Severe** — Adverse government reimbursement change hitting a core line of business. *Condition:* the change is enacted or final (not proposed), it applies to a line the company reports as a segment or as its largest revenue source, and the company reports a realized operating loss in that line or a binding decision to exit it. A proposed rule, a forecast effect, or a final rule with a disclosed absorbable effect is Moderate.
 - **Moderate** — MLR trending above 88–90% for several quarters
 - **Moderate** — Rising labor costs (nursing shortages) without pricing offsets
 - **Minor** — Bad-debt / uncompensated care ticking up
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -99,7 +101,7 @@ Volume- and reimbursement-driven. Margins are thin and heavily shaped by governm
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 

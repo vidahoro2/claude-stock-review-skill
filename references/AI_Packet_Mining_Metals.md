@@ -1,6 +1,6 @@
 # AI Stock Review Packet: Mining & Metals
 
-**Version 2.1.1 — Last updated 2026-10-08.** Supersedes v2.1. Consistency update: five conclusion labels, Core provenance and evidence rules, Severe-cap eligibility, and required first-pass Core loading for the expectations test. Sector metrics, thresholds, red flags, and pillar weights are unchanged. Educational framework — not investment advice. No buy/sell/hold language.
+**Version 2.1.2 — Last updated 2026-10-08.** Supersedes v2.1.1. Shared scoring update: delegates applicability, band precedence and Severe-cap conditions to Core v2.1.8; each Severe flag now states the company-specific condition that activates the cap. Pillar weights are unchanged. v2.1.1 aligned the five conclusion labels, evidence rules, Severe-cap provenance and first-pass Core loading. Educational framework — not investment advice. No buy/sell/hold language.
 
 *Metals & mining, steel, construction materials* — GICS: Materials (Metals & Mining — gold, copper, diversified, steel, lithium)
 
@@ -83,12 +83,14 @@ Commodity cyclical like energy: the price of the metal drives everything, so cos
 
 **Red flags:**
 
-- **Severe** — High debt combined with a falling commodity price
-- **Severe** — Big acquisitions announced at cycle peaks
+- **Severe** — High debt combined with a falling commodity price. *Condition:* trailing net debt/EBITDA is above 3x (or the company has net debt with EBITDA at or below zero), its realized price for its main commodity is below the prior-year period, and a funding consequence is disclosed — a covenant waiver, amendment or expected non-compliance; a debt maturity inside 12 months without committed funding; or operating cash flow after interest paid not covering sustaining capex (count interest once, wherever the cash-flow statement shows it). Without a funding consequence: Moderate.
+- **Severe** — Big acquisitions announced at cycle peaks. *Condition:* a cycle peak is only known afterwards, so the announcement alone never qualifies. Severe when an acquisition that is large for the company (state the price against its pre-deal market value) was mainly debt-funded, pro-forma net debt/EBITDA is above 3x (or EBITDA is at or below zero), and one of the funding consequences above is disclosed. Otherwise Moderate.
 - **Moderate** — Key mines in high political-risk jurisdictions
 - **Minor** — Grade decline at flagship assets raising unit costs
 
 ## Scoring template
+
+**Shared scoring rules:** apply the Core Framework section "Shared scoring rules: applicability, bands, and Severe conditions" before rating pillars, computing the percentage, or applying a Severe cap.
 
 | Pillar | Weight | Rating 0–2 | Notes |
 |---|---|---|---|
@@ -100,7 +102,7 @@ Commodity cyclical like energy: the price of the metal drives everything, so cos
 
 Score each pillar 2 (Positive), 1 (Watch), 0 (Negative) vs peers and own history; weighted total ÷ 2 = 0–100%. ~75%+ strong on current evidence; 50–75% mixed — investigate the weak pillar; <50% with sufficient evidence and no qualifying Severe flag = weak on current evidence. The score is a research organizer, not a prediction engine.
 
-**Override rule:** any Severe red flag supported by **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
+**Override rule:** any Severe red flag whose written condition is met on **Verified** or **Calculated — verified inputs** evidence caps the total score at 50% until resolved. Show the uncapped score, the cap applied, and the displayed score. Two or more qualifying Severe flags usually mean **high-risk, special situation**. Candidate Severe flags resting on user-provided excerpts, Reported, Estimated, or Needs verification evidence remain provisional warnings and do not activate the cap; state what would verify them.
 
 ## Conclusion template
 
